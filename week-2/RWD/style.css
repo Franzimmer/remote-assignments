@@ -12,11 +12,13 @@ body {
 }
 
 header {
+	width: 100%;
 	display: flex;
 	align-items: center;
 	height: 50px;
 	padding: 0 2rem;
-	background-color: #DDD;
+	position: fixed;
+  	background-color: #DDD;
 }
 
 nav {

@@ -1,9 +1,11 @@
+// Request 1: Click to Change Text.
 const welcome = document.querySelector('#welcome');
 const welcomeMsg = document.querySelector('#welcome h1');
 welcome.addEventListener('click', () => {
 	welcomeMsg.textContent = 'Have a Good Time!';
 });
 
+// Request 2: Click to Show/Close Menu.
 const menuToggle = document.querySelector('.menu-button-container');
 const menuBtn = document.querySelector('.menu-button');
 const closeBtn = document.querySelector('.close-button');
@@ -21,19 +23,18 @@ menuToggle.addEventListener('click', () => {
 });
 
 function windowResize(x) {
-  	if (x.matches) { // If media query matches
-    	menu.style.display = "flex"; 	
-  	} else {
-  		menu.style.display = "none";
-  		menuBtn.style.display = 'block';
-    	closeBtn.style.display = 'none';
-  	}
+	if (x.matches) { // If media query matches
+		menu.style.display = "flex";
+	} else {
+		menu.style.display = "none";
+		menuBtn.style.display = 'block';
+		closeBtn.style.display = 'none';
+	}
 }
+const x = window.matchMedia("(min-width: 800px)");
+x.addListener(windowResize);
 
-const x = window.matchMedia("(min-width: 800px)")
-x.addListener(windowResize); // Attach listener function on state changes
-
-
+// Request 3: Click to Show More Content Boxes.
 const actionBtn = document.querySelector('#actionBtn button');
 const extraGridContainer = document.querySelector('#extra');
 const extraGrids = extraGridContainer.children;

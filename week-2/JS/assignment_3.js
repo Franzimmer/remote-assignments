@@ -7,6 +7,6 @@ function calculate(data) {
 	for (let i = 0; i < itemNum; i++ ) {
 		sum +=  productList[i].price;
 	}
-	let total = sum * discount;
+	const total = sum * discount;
 	return total;
 }
