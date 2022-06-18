@@ -10,12 +10,11 @@
 	<header>
 		<nav>
 			<span>Website Logo</span>
-			
-			<input id="menu-toggle" type="checkbox" />
-			<label class='menu-button-container' for="menu-toggle">
+			<label class='menu-button-container'>
 			    <div class='menu-button'></div>
+			    <div class='close-button hide'></div>
 			</label>
-			<ul class="menu">
+			<ul class="menu hide">
 				<li>Item 1</li>
 				<li>Item 2</li>
 				<li>Item 3</li>
@@ -31,17 +30,23 @@
 
 		<section id="content">
 			<h2 id="sectionTitle">Section Title</h2>
-			<div id="gridContainer">
+			<div class="gridContainer">
 				<div class="box">content box 1</div>
 				<div class="box">content box 2</div>
 				<div class="box">content box 3</div>
 				<div class="box">content box 4</div>
 			</div>
 		</section>
-		<div id="btn">
+		<div id="actionBtn">
 			<button>Call to Action</button>
 		</div>
+		<div class="gridContainer hide">
+			<div class="box hide extra">content box 5</div>
+			<div class="box hide extra">content box 6</div>
+			<div class="box hide extra">content box 7</div>
+			<div class="box hide extra">content box 8</div>
+		</div>
 	</main>
-
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

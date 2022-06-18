@@ -28,13 +28,13 @@ nav {
   	align-items: center;
 }
 
+.hide {
+	display: none;
+}
+
 /* ================================ 
 			Menu-Toggle 
 =================================*/
-
-#menu-toggle {
-	display: none;
-}
 
 .menu-button-container {
 	height: 100%;
@@ -51,7 +51,10 @@ nav {
 /*::after creates a pseudo-element that is the last child of the selected element.*/
 .menu-button,
 .menu-button::before,
-.menu-button::after {
+.menu-button::after,
+.close-button,
+.close-button::before,
+.close-button::after {
   	position: absolute;
   	background-color: #333;
   	height: 4px;
@@ -71,21 +74,18 @@ nav {
   	top: 8px;
 }
 
-/* ===================================== 
-		Menu-Toggle icon: clicked 
-======================================*/
+.close-button {
+  	background: rgba(255, 255, 255, 0);
+}
 
-#menu-toggle:checked + .menu-button-container .menu-button::before {
+.close-button::before {
+	content: "";
 	top: 0px;
 	transform: rotate(405deg);
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button {
-  	/*become transparent*/
-  	background: rgba(255, 255, 255, 0);
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button::after {
+.close-button::after {
+	content: "";
   	top: 0px;
   	transform: rotate(-405deg);
 }
@@ -97,37 +97,25 @@ nav {
 /*  remove list from normal work flow and offset it */
 	position: absolute;
 	top: 50px;
-	left: 0;
-	width: 100%;
+	right: 0;
+	width: 50%;
+	height: calc(100vh - 50px);
+	background-color: #BBB;
 	/* flexbox */
-	display: flex;
 	flex-direction: column;
 	list-style-type: none;
 }
 
-/* ~: general sibling selector */
-#menu-toggle ~ .menu li {
-	display: none;
-}
-
-#menu-toggle:checked ~ .menu li {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 /* >: child selector */
 .menu > li {
+	display: flex;
+	align-items: center;
 	margin: 0;
-	padding: 0.5rem 0;
+	padding: 0.5rem 1rem;
 	width: 100%;
 	color: white;
 	height: 3rem;
-	background-color: #222;
-}
-
-.menu > li:not(:last-child) {
-	border-bottom: 2px solid #444;
+	border-bottom: 2px solid #DDD;
 }
 
 /* ===================================== 
@@ -155,7 +143,7 @@ nav {
 	background-color: #9696cc;
 }
 
-#btn {
+#actionBtn {
 	display: flex;
 	justify-content: center;
 }
@@ -174,7 +162,7 @@ button {
 
 /*Content Boxes should change from 1-columns to 2-column layout*/
 @media screen and (min-width: 500px){
-	#gridContainer {
+	.gridContainer {
 		width: 90%;
 		margin: 0 auto;
 		display: grid;
@@ -214,7 +202,7 @@ button {
 }
 
 @media screen and (min-width: 1200px) {
-	#gridContainer {
+	.gridContainer {
 		max-width: 1200px;
 	}
 
