@@ -18,13 +18,28 @@ menuToggle.addEventListener('click', () => {
 		menuBtn.style.display = 'none';
 		closeBtn.style.display = 'block';
 	}
-
 });
 
+function windowResize(x) {
+  	if (x.matches) { // If media query matches
+    	menu.style.display = "flex"; 	
+  	} else {
+  		menu.style.display = "none";
+  		menuBtn.style.display = 'block';
+    	closeBtn.style.display = 'none';
+  	}
+}
+
+const x = window.matchMedia("(min-width: 800px)")
+x.addListener(windowResize); // Attach listener function on state changes
+
+
 const actionBtn = document.querySelector('#actionBtn button');
-const extraGrids = document.querySelectorAll('.extra');
+const extraGridContainer = document.querySelector('#extra');
+const extraGrids = extraGridContainer.children;
 actionBtn.addEventListener('click', () => {
-	for (const extra of extraGrids) {
-		extra.style.display = 'block';
+	extraGridContainer.style.display = 'grid';
+	for (const extraGrid of extraGrids) {
+		extraGrid.classList.remove("hide");
 	}
 });

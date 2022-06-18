@@ -99,6 +99,7 @@ nav {
 	top: 50px;
 	right: 0;
 	width: 50%;
+	height: 100%;
 	height: calc(100vh - 50px);
 	background-color: #BBB;
 	/* flexbox */
@@ -113,8 +114,8 @@ nav {
 	margin: 0;
 	padding: 0.5rem 1rem;
 	width: 100%;
-	color: white;
 	height: 3rem;
+	color: white;
 	border-bottom: 2px solid #DDD;
 }
 
@@ -139,13 +140,14 @@ nav {
 	text-align: center;
 	height: 20vh;
 	padding: 1rem;
-	margin: 0 2rem 2rem 2rem;
+	margin: 2rem;
 	background-color: #9696cc;
 }
 
 #actionBtn {
 	display: flex;
 	justify-content: center;
+
 }
 
 button {
@@ -154,6 +156,7 @@ button {
 	border-radius: 5px;
 	border: 1px solid #555;
 	background-color: aliceblue;
+	cursor: pointer;
 }
 
 /* ===================================== 
@@ -182,22 +185,25 @@ button {
 	}
 
 	.menu {
+		display: flex;
    		flex-direction: row;
+   		align-items: center;
 		position: static;
 		width: auto;
+		height: auto;
+		background-color: #DDD;
 		margin: 0;
 		padding: 0;
 	}
 
-	#menu-toggle ~ .menu li {
-		display: inline;
+	.menu li {
 		margin: 0 2rem 0 0;
 	  	padding: 0;
 	  	border: 0;
 	  	width: auto;
-	  	height: 100%;
 	  	background-color: #DDD;
  	  	color: #000;
+
 	}
 }
 
