@@ -1,0 +1,13 @@
+doctype html 
+header 
+	title My Username 
+body 
+	if username
+		h1 Your Username
+		strong Username: #{username}
+	else
+		h1 Enter user name
+		form(action='/trackName' method='post')
+			input(type="text" name="username" placeholder="Enter username")
+			br
+			button(type="submit") Submit  

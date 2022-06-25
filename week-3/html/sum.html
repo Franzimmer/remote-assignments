@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>Your Web Calculator</h1>
+  <form id="submit">
+    <input placeholder="enter a number">
+    <button onclick="returnResult()">Show answer</button>
+  </form>
+ 
+
+  
+
+  <div>
+    <h2>The answer is ...</h2>
+    <p id="ajax"></p>
+  </div>
+
+  <script>
+  const form = document.getElementById('submit');
+  // prevent reloading the page automatically
+  form.addEventListener('click', e => e.preventDefault());
+  
+  function returnResult() {   
+    let xhr = new XMLHttpRequest();
+    const input = document.querySelector('input');
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status=== 200 ) {      
+        document.getElementById('ajax').textContent = xhr.responseText;
+        input.value = ''; 
+      }
+    };
+
+    if (input.value === '') {
+      xhr.open('GET',`/getData`); // return "Lack of parameter"
+    } else {
+      xhr.open('GET',`/getData?number=${input.value}`);
+    }
+     
+    xhr.send();
+  };
+  </script>
+</body>
+</html>
+
+
