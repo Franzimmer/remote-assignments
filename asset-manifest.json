@@ -1,16 +1,16 @@
 {
-  "files": {
-    "main.css": "/static/css/main.a4e9b259.css",
-    "main.js": "/static/js/main.7255d78f.js",
-    "static/js/787.d1577b05.chunk.js": "/static/js/787.d1577b05.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.a4e9b259.css.map": "/static/css/main.a4e9b259.css.map",
-    "main.7255d78f.js.map": "/static/js/main.7255d78f.js.map",
-    "787.d1577b05.chunk.js.map": "/static/js/787.d1577b05.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.a4e9b259.css",
-    "static/js/main.7255d78f.js"
-  ]
+  "main.css": "/remote-assignments/static/css/main.3cd9ba9d.chunk.css",
+  "main.js": "/remote-assignments/static/js/main.bd8c2380.chunk.js",
+  "main.js.map": "/remote-assignments/static/js/main.bd8c2380.chunk.js.map",
+  "static/js/1.7ab2393a.chunk.js": "/remote-assignments/static/js/1.7ab2393a.chunk.js",
+  "static/js/1.7ab2393a.chunk.js.map": "/remote-assignments/static/js/1.7ab2393a.chunk.js.map",
+  "static/js/2.5dafc656.chunk.js": "/remote-assignments/static/js/2.5dafc656.chunk.js",
+  "static/js/2.5dafc656.chunk.js.map": "/remote-assignments/static/js/2.5dafc656.chunk.js.map",
+  "runtime~main.js": "/remote-assignments/static/js/runtime~main.9366ddba.js",
+  "runtime~main.js.map": "/remote-assignments/static/js/runtime~main.9366ddba.js.map",
+  "static/media/logo.svg": "/remote-assignments/static/media/logo.06e73328.svg",
+  "static/css/main.3cd9ba9d.chunk.css.map": "/remote-assignments/static/css/main.3cd9ba9d.chunk.css.map",
+  "index.html": "/remote-assignments/index.html",
+  "precache-manifest.5d0278c3931d7e9d180cc0a1cfa05b8a.js": "/remote-assignments/precache-manifest.5d0278c3931d7e9d180cc0a1cfa05b8a.js",
+  "service-worker.js": "/remote-assignments/service-worker.js"
 }
