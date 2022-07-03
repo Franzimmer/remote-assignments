@@ -11,12 +11,17 @@ body {
 	font-family: "Raleway", Times New Roman, sans-serif;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 header {
 	width: 100%;
 	display: flex;
 	align-items: center;
 	height: 50px;
-	padding: 0 2rem;
+	padding: 5px 2rem;
 	position: fixed;
   background-color: #DDD;
 }
@@ -131,6 +136,7 @@ nav {
 	justify-content: center;
 	height:  30vh;
 	background-color: lightblue;
+  margin-top: 50px;
 }
 
 #sectionTitle {
